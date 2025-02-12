@@ -51,7 +51,7 @@ header nav ul li a:hover {
 .hero {
     background-color: #e6f2ff;
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px;
 }
 
 .hero h2 {
@@ -78,7 +78,50 @@ header nav ul li a:hover {
     background-color: #002244;
 }
 
-/* Projects Section */
+/* Search Section */
+.search {
+    padding: 40px 20px;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.search h2 {
+    font-size: 28px;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.search form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search input {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 60%;
+}
+
+.search button {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: #002244;
+}
+
+/* Featured Projects Section */
 .projects {
     padding: 40px 20px;
 }
@@ -87,12 +130,14 @@ header nav ul li a:hover {
     font-size: 28px;
     margin-bottom: 20px;
     color: #003366;
+    text-align: center;
 }
 
 .project-cards {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card {
@@ -103,6 +148,7 @@ header nav ul li a:hover {
     width: 100%;
     max-width: 280px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
@@ -125,44 +171,106 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* About Section */
+/* About Us Section */
 .about {
     background-color: #f9f9f9;
     padding: 40px 20px;
+    text-align: center;
 }
 
 .about h2 {
     font-size: 28px;
     color: #003366;
+    margin-bottom: 20px;
 }
 
 .about p {
     font-size: 16px;
     color: #333333;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 40px 20px;
+    background-color: #e6f2ff;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 28px;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.testimonial-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+    font-size: 16px;
+    color: #333333;
+    font-style: italic;
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #003366;
+    margin-top: 10px;
+}
+
+.card p:nth-child(1) {
+    margin-bottom: 20px;
 }
 
 /* Contact Section */
 .contact {
     padding: 40px 20px;
-    background-color: #e6f2ff;
+    background-color: #ffffff;
+    text-align: center;
 }
 
 .contact h2 {
     font-size: 28px;
     color: #003366;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 20px;
 }
 
 .contact form {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .contact input, .contact textarea {
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #cccccc;
     border-radius: 5px;
     font-size: 16px;
+    width: 100%;
 }
 
 .contact button {
