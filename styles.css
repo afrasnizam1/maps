@@ -1,229 +1,192 @@
 /* General Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: #000000; /* Black font */
-  background-color: #ffffff; /* White background */
+    font-family: Arial, sans-serif;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
 }
 
 /* Header */
 header {
-  background-color: #003366; /* Dark blue background */
-  color: #ffffff; /* White text */
-  padding: 20px 0;
-}
-
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+    background-color: #003366;
+    color: #ffffff;
+    padding: 20px 0;
 }
 
 header .logo h1 {
-  font-size: 24px;
+    font-size: 28px;
 }
 
 header nav ul {
-  list-style: none;
-  display: flex;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
 }
 
 header nav ul li {
-  margin-left: 20px;
+    margin-left: 20px;
 }
 
 header nav ul li a {
-  color: #ffffff; /* White text for links */
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 header nav ul li a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* Hero Section */
 .hero {
-  background-color: #e6f2ff; /* Light blue background */
-  text-align: center;
-  padding: 60px 20px;
+    background-color: #e6f2ff;
+    text-align: center;
+    padding: 60px 20px;
 }
 
 .hero h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #003366; /* Dark blue text */
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #003366;
 }
 
 .hero p {
-  font-size: 18px;
-  color: #003366; /* Dark blue text */
+    font-size: 18px;
+    color: #003366;
 }
 
 .cta-button {
-  background-color: #003366; /* Dark blue button */
-  color: #ffffff;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  text-decoration: none;
+    background-color: #003366;
+    color: #ffffff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 .cta-button:hover {
-  background-color: #002244; /* Darker blue on hover */
+    background-color: #002244;
 }
 
-/* Main Content Section */
-section {
-  padding: 40px 20px;
+/* Projects Section */
+.projects {
+    padding: 40px 20px;
 }
 
-.container {
-  width: 90%;
-  margin: 0 auto;
-}
-
-h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #003366;
-}
-
-p {
-  font-size: 16px;
-  color: #333333;
-  line-height: 1.8;
+.projects h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #003366;
 }
 
 .project-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .card {
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  border-radius: 8px;
-  padding: 20px;
-  width: 100%;
-  max-width: 280px;
-  text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
 }
 
 .card h3 {
-  color: #003366; /* Dark blue text */
-  font-size: 20px;
+    font-size: 20px;
+    color: #003366;
 }
 
 .card p {
-  color: #666666; /* Light gray text */
-  font-size: 14px;
+    font-size: 14px;
+    color: #666666;
 }
 
 .card a {
-  color: #003366; /* Dark blue link */
-  text-decoration: none;
-  font-weight: bold;
+    color: #003366;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .card a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
-/* Forms */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+/* About Section */
+.about {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
 }
 
-input[type="email"],
-input[type="password"],
-textarea {
-  padding: 10px;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  font-size: 16px;
+.about h2 {
+    font-size: 28px;
+    color: #003366;
 }
 
-input[type="email"]:focus,
-input[type="password"]:focus,
-textarea:focus {
-  border-color: #003366; /* Dark blue border on focus */
-  outline: none;
+.about p {
+    font-size: 16px;
+    color: #333333;
 }
 
-button {
-  background-color: #003366; /* Dark blue button */
-  color: #ffffff;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
+/* Contact Section */
+.contact {
+    padding: 40px 20px;
+    background-color: #e6f2ff;
 }
 
-button:hover {
-  background-color: #002244; /* Darker blue on hover */
+.contact h2 {
+    font-size: 28px;
+    color: #003366;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact button {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #002244;
 }
 
 /* Footer */
 footer {
-  background-color: #003366; /* Dark blue footer */
-  color: #ffffff;
-  text-align: center;
-  padding: 20px 0;
+    background-color: #003366;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
 }
 
 footer p {
-  font-size: 14px;
-}
-
-footer a {
-  color: #ffffff; /* White text for links */
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-  .project-cards {
-    flex-direction: column;
-  }
-
-  header .container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  header nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  header nav ul li {
-    margin-left: 0;
-    margin-bottom: 10px;
-  }
-
-  .hero h2 {
-    font-size: 28px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
+    font-size: 14px;
 }
