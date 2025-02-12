@@ -1,21 +1,64 @@
-import { useSession, signIn, signOut } from "next-auth/react";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
-
-export default function Home() {
-  const { data: session } = useSession();
-
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-3xl font-bold mb-4">Welcome to the Project</h1>
-      {session ? (
-        <div>
-          <p className="mb-4">Signed in as {session.user.email}</p>
-          <Button onClick={() => signOut()}>Sign Out</Button>
-        </div>
-      ) : (
-        <Button onClick={() => signIn()}>Sign In</Button>
-      )}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transform Your Life - Fitness & Health</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Transform Your Life with Fitness</h1>
+      <p>Fitness is not just about being physically strong, it's about transforming your body and mind.</p>
     </div>
-  );
-}
+  </header>
+
+  <section class="benefits">
+    <div class="container">
+      <h2>Benefits of Fitness</h2>
+      <div class="benefit-cards">
+        <div class="card">
+          <h3>Improved Mental Health</h3>
+          <p>Exercise boosts your mood, reduces stress, and helps you focus better.</p>
+        </div>
+        <div class="card">
+          <h3>Increased Energy Levels</h3>
+          <p>Regular physical activity improves your stamina and keeps you energized throughout the day.</p>
+        </div>
+        <div class="card">
+          <h3>Better Sleep</h3>
+          <p>Exercise helps regulate your sleep cycle, leading to a deeper and more restful sleep.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="transformation">
+    <div class="container">
+      <h2>Transform Your Life</h2>
+      <p>Adopting a healthy lifestyle can change your life in ways you can't even imagine. Start your fitness journey today, and see the results in your body and mind.</p>
+      <a href="#contact" class="cta-button">Get Started</a>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>If you have any questions or need help starting your fitness journey, we're here to help.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <textarea placeholder="Your message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Transform Your Life. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
