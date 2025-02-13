@@ -3,117 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer Product Management</title>
+    <title>Project Finder</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 50px;
-        }
-        #login-container {
-            background: white;
-            padding: 30px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-            display: inline-block;
-            border-radius: 10px;
-        }
-        .logo {
-            width: 100px;
-            margin-bottom: 15px;
-        }
-        input {
-            display: block;
-            margin: 10px auto;
-            padding: 12px;
-            width: 85%;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            background: #28a745;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background: #218838;
-        }
-        .customer-view {
-            display: none;
-            background: white;
-            padding: 25px;
-            margin-top: 20px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            background: #007bff;
-            color: white;
-            padding: 12px;
-            margin: 8px 0;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .product-img {
-            width: 80px;
-            margin: 10px;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 <body>
-    <div id="login-container">
-        <img src="logo.png" alt="Site Logo" class="logo">
-        <h2>Login</h2>
-        <input type="text" id="username" placeholder="Username">
-        <input type="password" id="password" placeholder="Password">
-        <button onclick="authenticateUser()">Login</button>
-    </div>
-    
-    <div id="customer-a-view" class="customer-view">
-        <h2>Welcome Customer A</h2>
-        <p>Manage your electronics products here.</p>
-        <ul>
-            <li><img src="smartphone.jpg" class="product-img"> Smartphone</li>
-            <li><img src="laptop.jpg" class="product-img"> Laptop</li>
-            <li><img src="tablet.jpg" class="product-img"> Tablet</li>
-        </ul>
-    </div>
-    
-    <div id="customer-b-view" class="customer-view">
-        <h2>Welcome Customer B</h2>
-        <p>Manage your fashion products here.</p>
-        <ul>
-            <li><img src="tshirt.jpg" class="product-img"> T-Shirts</li>
-            <li><img src="jeans.jpg" class="product-img"> Jeans</li>
-            <li><img src="sneakers.jpg" class="product-img"> Sneakers</li>
-        </ul>
-    </div>
-    
-    <script>
-        function authenticateUser() {
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
-            
-            if (username === "customerA" && password === "passwordA") {
-                document.getElementById("login-container").style.display = "none";
-                document.getElementById("customer-a-view").style.display = "block";
-            } else if (username === "customerB" && password === "passwordB") {
-                document.getElementById("login-container").style.display = "none";
-                document.getElementById("customer-b-view").style.display = "block";
-            } else {
-                alert("Invalid credentials");
-            }
-        }
-    </script>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Project Finder</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://afrasnizam1.github.io/maps/login.html">Login</a></li>  
+             
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Find Your Ideal Construction Project</h2>
+            <p>Browse a variety of projects that meet your specific business needs and interests.</p>
+            <br>
+            <br>
+            <a href="#projects" class="cta-button">Browse Projects</a>
+                        <br>
+
+        </div>
+    </section>
+
+    <!-- Search Bar Section -->
+    <section class="search">
+        <div class="container">
+            <h2>Search for Projects</h2>
+            <form action="#" method="GET">
+                <input type="text" name="search" placeholder="Search projects by location, type, or name">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="project-cards">
+                <div class="card">
+                    <h3>Building A</h3>
+                    <p>Location: New York, USA</p>
+                    <p>Project type: Commercial</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3>Building B</h3>
+                    <p>Location: San Francisco, USA</p>
+                    <p>Project type: Residential</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3>Building C</h3>
+                    <p>Location: Chicago, USA</p>
+                    <p>Project type: Industrial</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+       
+   
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Project Finder, we connect developers, builders, and construction professionals with the projects that fit their needs. Our platform helps you discover opportunities in commercial, residential, and industrial projects worldwide.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What Our Users Are Saying</h2>
+            <div class="testimonial-cards">
+                <div class="card">
+                    <p>"Project Finder made it easy to find and bid on high-quality construction projects. Their platform is very user-friendly!"</p>
+                    <h3>John Doe</h3>
+                    <p>Construction Manager</p>
+                </div>
+                <div class="card">
+                    <p>"I found the perfect project for my business. The project details were comprehensive and up-to-date."</p>
+                    <h3>Jane Smith</h3>
+                    <p>Real Estate Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need more information, feel free to contact us!</p>
+            <form action="#">
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Project Finder. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
