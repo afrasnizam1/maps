@@ -5,17 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Product Management</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        #login-container {
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            border-radius: 8px;
+        }
+        input {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+        .customer-view {
+            display: none;
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <div id="login-container">
         <h2>Login</h2>
-        <br>
         <input type="text" id="username" placeholder="Username">
         <input type="password" id="password" placeholder="Password">
         <button onclick="authenticateUser()">Login</button>
     </div>
     
-    <div id="customer-a-view" class="customer-view" style="display: none;">
+    <div id="customer-a-view" class="customer-view">
         <h2>Welcome Customer A</h2>
         <p>Manage your electronics products here.</p>
         <ul>
@@ -25,7 +77,7 @@
         </ul>
     </div>
     
-    <div id="customer-b-view" class="customer-view" style="display: none;">
+    <div id="customer-b-view" class="customer-view">
         <h2>Welcome Customer B</h2>
         <p>Manage your fashion products here.</p>
         <ul>
@@ -40,10 +92,10 @@
             const username = document.getElementById("username").value;
             const password = document.getElementById("password").value;
             
-            if (username === "Afras" && password === "Nizam") {
+            if (username === "Afras" && password === "1") {
                 document.getElementById("login-container").style.display = "none";
                 document.getElementById("customer-a-view").style.display = "block";
-            } else if (username === "Shams" && password === "Ahmadi") {
+            } else if (username === "Shams" && password === "2") {
                 document.getElementById("login-container").style.display = "none";
                 document.getElementById("customer-b-view").style.display = "block";
             } else {
