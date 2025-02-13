@@ -7,33 +7,38 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
             text-align: center;
             padding: 50px;
         }
         #login-container {
             background: white;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
             display: inline-block;
-            border-radius: 8px;
+            border-radius: 10px;
+        }
+        .logo {
+            width: 100px;
+            margin-bottom: 15px;
         }
         input {
             display: block;
             margin: 10px auto;
-            padding: 10px;
-            width: 80%;
+            padding: 12px;
+            width: 85%;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
         button {
             background: #28a745;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
         }
         button:hover {
             background: #218838;
@@ -41,10 +46,10 @@
         .customer-view {
             display: none;
             background: white;
-            padding: 20px;
+            padding: 25px;
             margin-top: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
         }
         ul {
             list-style-type: none;
@@ -53,14 +58,21 @@
         ul li {
             background: #007bff;
             color: white;
-            padding: 10px;
-            margin: 5px 0;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .product-img {
+            width: 80px;
+            margin: 10px;
             border-radius: 5px;
         }
     </style>
 </head>
 <body>
     <div id="login-container">
+        <img src="logo.png" alt="Site Logo" class="logo">
         <h2>Login</h2>
         <input type="text" id="username" placeholder="Username">
         <input type="password" id="password" placeholder="Password">
@@ -71,9 +83,9 @@
         <h2>Welcome Customer A</h2>
         <p>Manage your electronics products here.</p>
         <ul>
-            <li>Smartphone</li>
-            <li>Laptop</li>
-            <li>Tablet</li>
+            <li><img src="smartphone.jpg" class="product-img"> Smartphone</li>
+            <li><img src="laptop.jpg" class="product-img"> Laptop</li>
+            <li><img src="tablet.jpg" class="product-img"> Tablet</li>
         </ul>
     </div>
     
@@ -81,9 +93,9 @@
         <h2>Welcome Customer B</h2>
         <p>Manage your fashion products here.</p>
         <ul>
-            <li>T-Shirts</li>
-            <li>Jeans</li>
-            <li>Sneakers</li>
+            <li><img src="tshirt.jpg" class="product-img"> T-Shirts</li>
+            <li><img src="jeans.jpg" class="product-img"> Jeans</li>
+            <li><img src="sneakers.jpg" class="product-img"> Sneakers</li>
         </ul>
     </div>
     
@@ -92,10 +104,10 @@
             const username = document.getElementById("username").value;
             const password = document.getElementById("password").value;
             
-            if (username === "Afras" && password === "1") {
+            if (username === "customerA" && password === "passwordA") {
                 document.getElementById("login-container").style.display = "none";
                 document.getElementById("customer-a-view").style.display = "block";
-            } else if (username === "Shams" && password === "2") {
+            } else if (username === "customerB" && password === "passwordB") {
                 document.getElementById("login-container").style.display = "none";
                 document.getElementById("customer-b-view").style.display = "block";
             } else {
