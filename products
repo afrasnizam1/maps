@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Product Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="authenticateUser()">Login</button>
+    </div>
+    
+    <div id="customer-a-view" class="customer-view" style="display: none;">
+        <h2>Welcome Customer A</h2>
+        <p>Manage your electronics products here.</p>
+        <ul>
+            <li>Smartphone</li>
+            <li>Laptop</li>
+            <li>Tablet</li>
+        </ul>
+    </div>
+    
+    <div id="customer-b-view" class="customer-view" style="display: none;">
+        <h2>Welcome Customer B</h2>
+        <p>Manage your fashion products here.</p>
+        <ul>
+            <li>T-Shirts</li>
+            <li>Jeans</li>
+            <li>Sneakers</li>
+        </ul>
+    </div>
+    
+    <script>
+        function authenticateUser() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            
+            if (username === "customerA" && password === "passwordA") {
+                document.getElementById("login-container").style.display = "none";
+                document.getElementById("customer-a-view").style.display = "block";
+            } else if (username === "customerB" && password === "passwordB") {
+                document.getElementById("login-container").style.display = "none";
+                document.getElementById("customer-b-view").style.display = "block";
+            } else {
+                alert("Invalid credentials");
+            }
+        }
+    </script>
+</body>
+</html>
